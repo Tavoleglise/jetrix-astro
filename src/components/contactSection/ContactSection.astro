@@ -1,9 +1,36 @@
 ---
-const { href, title, body } = Astro.props;
+import {
+  ClockIcon,
+  PhoneIcon,
+  MailIcon,
+  AmongUsIcon,
+} from "../../assets/svgs/contactSectionIcons.jsx";
+
+import ContactForm from "../contactForm/ContactForm.jsx";
 ---
 
 <section class="container mx-auto">
-  <div class="text-3xl">Contacto</div>
-  <div class="flex-wrap"></div>
+  <div class="text-3xl mb-16">Contacto</div>
+  <div class="grid grid-cols-3 gap-4">
+    <div class="flex justify-center flex-col items-center">
+      <ClockIcon height="90" width="90" /><span class="my-4 text-center"
+        >Lun - Vie: 9 a 18 hrs Sáb - Dom: No Se Labora</span
+      >
+    </div>
+    <div class="flex justify-center flex-col items-center">
+      <PhoneIcon height="90" width="90" /><span class="my-4 text-center"
+        >(+52) 55-1668-6096</span
+      >
+    </div><div class="flex justify-center flex-col items-center">
+      <MailIcon height="90" width="90" /><span class="my-4 text-center"
+        >marketing@jetrix.com.mx atencionaclientes@jetrix.com.mx</span
+      >
+    </div><div class="col-start-2 flex justify-center flex-col items-center">
+      <AmongUsIcon height="90" width="90" /><span class="my-4 text-center"
+        >(+52) 55-7113-8164</span
+      >
+    </div>
+  </div>
+  <ContactForm client:visible />
 </section>
 <style></style>
