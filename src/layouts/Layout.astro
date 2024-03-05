@@ -1,0 +1,32 @@
+---
+import Header from "../components/header/Header.jsx";
+import ContactSection from "../components/contactSection/ContactSection.astro";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header client:visible />
+    <slot />
+    <ContactSection />
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: sans-serif;
+    border-box: box-sizing;
+  }
+  body {
+    background-color: #e2e4e8;
+    min-height: 100vh;
+  }
+</style>
