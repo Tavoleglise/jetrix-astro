@@ -5,12 +5,12 @@ const AplicationsShowCase = () => {
   return (
     <div>
       <Card className="p-4">
-        <CardHeader className="text-3xl">
+        <CardHeader className="text-5xl">
           Con nuestra tecnologa puedes hacer
         </CardHeader>
         <CardBody>
-          <div className="flex flex-col justify-center content-center gap-4 mb-4">
-            <Tabs>
+          <div className="flex flex-col flex-wrap justify-center content-center gap-4 mb-4">
+            <Tabs className="flex justify-center">
               <Tab key="0" title="Music">
                 <div className="flex gap-4 justify-center">
                   <AplicationsShowCaseCard />
