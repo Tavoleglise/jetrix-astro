@@ -11,7 +11,7 @@ const ContactForm = () => {
         <div>
           <Input type="email" label="Email" className="py-4" />
         </div>
-        <div className="flex ">
+        <div className="flex">
           <Input type="email" label="Email" className="py-4 mr-4" />
           <Input type="email" label="Email" className="py-4" />
         </div>

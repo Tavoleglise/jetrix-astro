@@ -23,7 +23,7 @@ const Slider = () => {
   };
 
   return (
-    <section className=" bg-sky-900 py-16">
+    <section className="py-4">
       <div
         style={{ width: `${sliderSections.length * 100}vw` }}
         className="flex"
@@ -35,18 +35,14 @@ const Slider = () => {
               key={section.id}
               animate={{ x: `${-100 * (activeSection - 1)}%` }}
             >
-              <Card className="my-6">
-                <CardBody>
-                  <div className="flex">
-                    <div className="w-1/2 p-4 flex flex-wrap justify-center content-center">
-                      {section.text}
-                    </div>
-                    <div className="w-1/2 p-4">
-                      <Image width={800} src="/assets/images/maquina.png" />
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
+              <div className="flex">
+                <div className="w-1/2 p-4 flex flex-wrap justify-center content-center">
+                  {section.text}
+                </div>
+                <div className="w-1/2 p-4">
+                  <Image width={800} src="/assets/images/maquina.png" />
+                </div>
+              </div>
             </motion.div>
           );
         })}

@@ -1,36 +1,28 @@
 ---
-import {
-  ClockIcon,
-  PhoneIcon,
-  MailIcon,
-  AmongUsIcon,
-} from "../../assets/svgs/contactSectionIcons.jsx";
-
 import ContactForm from "../contactForm/ContactForm.jsx";
+console.log(Astro);
+
+const isHome = Astro.url.pathname === "/";
 ---
 
-<section class="container mx-auto">
-  <div class="text-5xl">Contacto</div>
-  <div class="grid grid-cols-3 gap-4 my-16">
-    <div class="flex justify-center flex-col items-center">
-      <ClockIcon height="90" width="90" /><span class="my-4 text-center"
-        >Lun - Vie: 9 a 18 hrs Sáb - Dom: No Se Labora</span
-      >
-    </div>
-    <div class="flex justify-center flex-col items-center">
-      <PhoneIcon height="90" width="90" /><span class="my-4 text-center"
-        >(+52) 55-1668-6096</span
-      >
-    </div><div class="flex justify-center flex-col items-center">
-      <MailIcon height="90" width="90" /><span class="my-4 text-center"
-        >marketing@jetrix.com.mx atencionaclientes@jetrix.com.mx</span
-      >
-    </div><div class="col-start-2 flex justify-center flex-col items-center">
-      <AmongUsIcon height="90" width="90" /><span class="my-4 text-center"
-        >(+52) 55-7113-8164</span
-      >
-    </div>
-  </div>
+<section class="container mx-auto overflow-auto">
   <ContactForm client:visible />
 </section>
+{
+  isHome && (
+    <section class="flex mx-auto text-center my-16 py-16 text-white flex-col justify-center items-center bg-blue-900">
+      <img src="" alt="" />
+      <div class="text-5xl font-bold mb-6">Visítanos</div>
+      <div class="text-xl max-w-96 mb-6">
+        <img class="" />
+        Estamos cerca de ti, ven a nuestras instalaciones si necesitas más
+        información.
+      </div>
+      <div class="text-2xl font-semibold max-w-96">
+        Alexander Von Humboldt #8, Lomas Verdes, C.P. 53125, Naucalpan de
+        Juárez, Estado de México
+      </div>
+    </section>
+  )
+}
 <style></style>

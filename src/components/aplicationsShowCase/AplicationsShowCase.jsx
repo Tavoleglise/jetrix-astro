@@ -3,7 +3,7 @@ import AplicationsShowCaseCard from "./AplicationsShowCaseCard";
 
 const AplicationsShowCase = () => {
   return (
-    <div>
+    <section>
       <Card className="p-4">
         <CardHeader className="text-5xl">
           Con nuestra tecnologa puedes hacer
@@ -12,7 +12,7 @@ const AplicationsShowCase = () => {
           <div className="flex flex-col flex-wrap justify-center content-center gap-4 mb-4">
             <Tabs className="flex justify-center">
               <Tab key="0" title="Music">
-                <div className="flex gap-4 justify-center">
+                <div className="flex flex-wrap gap-4 justify-center">
                   <AplicationsShowCaseCard />
                   <AplicationsShowCaseCard />
                   <AplicationsShowCaseCard />
@@ -43,7 +43,7 @@ const AplicationsShowCase = () => {
           </div>
         </CardBody>
       </Card>
-    </div>
+    </section>
   );
 };
 

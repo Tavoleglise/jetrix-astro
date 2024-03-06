@@ -1,6 +1,7 @@
 ---
 import Header from "../components/header/Header.jsx";
 import ContactSection from "../components/contactSection/ContactSection.astro";
+import Footer from "../components/footer/Footer.astro";
 const { title } = Astro.props;
 ---
 
@@ -18,10 +19,11 @@ const { title } = Astro.props;
     <Header client:visible />
     <slot />
     <ContactSection />
+    <Footer />
   </body>
 </html>
 <style is:global>
-  html {
+  :root {
     font-family: sans-serif;
     border-box: box-sizing;
   }
