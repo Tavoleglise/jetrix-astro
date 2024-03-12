@@ -1,11 +1,12 @@
 ---
-
+import { JetrixLogo } from "../jetrixLogo/JetrixLogo.jsx";
 ---
 
-<footer class="container mx-auto columns-3xs">
+<footer class="container mx-auto columns-3xs flex place-content-around py-16">
   <div class="flex justify-center">Términos y condiciones</div>
-  <div class="flex justify-center">
+  <div class="flex flex-col flex-wrap items-center">
     © 2023 Jetrix. Todos los derechos reservados
+    <JetrixLogo className="mt-16 w-48" />
   </div>
   <div class="flex justify-center">Aviso de privacidad</div>
 </footer>

@@ -6,8 +6,8 @@ import {
   NavbarItem,
   Link,
 } from "@nextui-org/react";
-import { JetrixLogo } from "./JetrixLogo.jsx";
-import { menuItems } from "../../utils/headerUtils.js";
+import { JetrixLogo } from "../jetrixLogo/JetrixLogo.jsx";
+import { menuItems } from "../../utils/constants.js";
 
 const Header = () => {
   const [activeButton, setActiveButton] = useState(menuItems[0].id);
